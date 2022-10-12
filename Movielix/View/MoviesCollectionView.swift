@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MoviesCollectionView: View {
+    @ObservedObject var movieViewModel: MoviesViewModel
     var title: String
     var movieList: [Movie]
 
@@ -33,7 +34,7 @@ struct MoviesCollectionView: View {
                     ForEach(movieList, id: \.self) { movie in
                         GeometryReader { proxy in
                             let scale = getScale(proxy: proxy)
-                            NavigationLink(destination: MovieDetail(movie: movie)) {
+                            NavigationLink(destination: MovieDetail(movieViewModel: movieViewModel, movie: movie)) {
                                 MovieVStack(url: "https://image.tmdb.org/t/p/w500\(movie.poster_path)", scale: scale)
                             }
                         }
@@ -68,11 +69,5 @@ struct MoviesCollectionView: View {
                 }
             }
         }
-    }
-}
-
-struct MoviesCollectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        MoviesCollectionView(title: "", movieList: [])
     }
 }

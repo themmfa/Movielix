@@ -42,6 +42,7 @@ let dummy_suggestions = [
 ]
 
 struct MovieDetail: View {
+    @ObservedObject var movieViewModel: MoviesViewModel
     var movie: Movie
 
     var body: some View {
@@ -69,8 +70,7 @@ struct MovieDetail: View {
                             .modifier(CustomTextModifier())
                         RatingView(movieRating: movie.vote_average)
                         DescriptionView(movieDesc: movie.overview)
-
-                        SimilarMoviesView(similar: dummy_suggestions)
+                        SimilarMoviesView(movieViewModel: movieViewModel, movie: movie)
                     }
                     .padding(.horizontal, 20)
                 }
@@ -81,25 +81,34 @@ struct MovieDetail: View {
 }
 
 private struct SimilarMoviesView: View {
-    var similar: [Movie]
+    @ObservedObject var movieViewModel: MoviesViewModel
+    var movie: Movie
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Similar Movies")
                 .modifier(CustomTextModifier(font: Font.custom("Poppins-Bold", size: 24)))
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(similar, id: \.self) { similar in
-                        AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(similar.poster_path)")) { image in
-                            image
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 100, height: 100)
-                        } placeholder: {
-                            Image(systemName: "photo.artframe")
-                                .resizable()
-                                .scaledToFill()
+                    ForEach(movieViewModel.similar, id: \.self) { movie in
+                        NavigationLink(destination:MovieDetail(movieViewModel: movieViewModel, movie: movie)){
+                            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.poster_path)")) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 100)
+                            } placeholder: {
+                                Image(systemName: "photo.artframe")
+                                    .resizable()
+                                    .scaledToFill()
+                            }
                         }
                     }
+                }
+            }
+            .onAppear {
+                Task {
+                    await movieViewModel.getSimilarMovies(id: movie.id)
                 }
             }
         }
@@ -128,11 +137,5 @@ private struct RatingView: View {
             Text("\(movieRating, specifier: "%.1f") / 10")
                 .foregroundColor(.gray)
         }
-    }
-}
-
-struct MovieDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieDetail(movie: dummy)
     }
 }

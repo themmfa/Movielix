@@ -53,14 +53,14 @@ struct MoviesView: View {
         NavigationView {
             VStack(spacing: 20) {
                 ScrollView {
-                    UpcomingMovies(upcomingMovies: movieViewModel.upcoming)
-                    TopRatedMovies(topRatedMovies: movieViewModel.topRated)
-                    PopularMovies(popularMovies: movieViewModel.popular)
+                    UpcomingMovies(movieViewModel: movieViewModel, upcomingMovies: movieViewModel.upcoming)
+                    TopRatedMovies(movieViewModel: movieViewModel, topRatedMovies: movieViewModel.topRated)
+                    PopularMovies(movieViewModel: movieViewModel, popularMovies: movieViewModel.popular)
                     Spacer()
                 }
             }
             .onAppear {
-                Task{
+                Task {
                     await movieViewModel.getTopRatedMovies()
                     await movieViewModel.getUpcomingMovies()
                     await movieViewModel.getPopularMovies()
@@ -72,25 +72,28 @@ struct MoviesView: View {
 }
 
 struct UpcomingMovies: View {
+    @ObservedObject var movieViewModel: MoviesViewModel
     var upcomingMovies: [Movie]
     var body: some View {
-        MoviesCollectionView(title: "UPCOMING", movieList: upcomingMovies)
+        MoviesCollectionView(movieViewModel: movieViewModel, title: "UPCOMING", movieList: upcomingMovies)
     }
 }
 
 struct TopRatedMovies: View {
+    @ObservedObject var movieViewModel: MoviesViewModel
     var topRatedMovies: [Movie]
 
     var body: some View {
-        MoviesCollectionView(title: "TOP RATED", movieList: topRatedMovies)
+        MoviesCollectionView(movieViewModel: movieViewModel, title: "TOP RATED", movieList: topRatedMovies)
     }
 }
 
 struct PopularMovies: View {
+    @ObservedObject var movieViewModel: MoviesViewModel
     var popularMovies: [Movie]
 
     var body: some View {
-        MoviesCollectionView(title: "POPULAR", movieList: popularMovies)
+        MoviesCollectionView(movieViewModel: movieViewModel, title: "POPULAR", movieList: popularMovies)
     }
 }
 
