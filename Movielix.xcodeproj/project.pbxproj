@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		21961FFB28F6A8C900B82595 /* MovielixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21961FFA28F6A8C900B82595 /* MovielixApp.swift */; };
-		21961FFD28F6A8C900B82595 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21961FFC28F6A8C900B82595 /* ContentView.swift */; };
+		21961FFD28F6A8C900B82595 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21961FFC28F6A8C900B82595 /* MoviesView.swift */; };
 		21961FFF28F6A8CA00B82595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21961FFE28F6A8CA00B82595 /* Assets.xcassets */; };
 		2196200228F6A8CA00B82595 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2196200128F6A8CA00B82595 /* Preview Assets.xcassets */; };
 		2196200C28F6A8CA00B82595 /* MovielixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196200B28F6A8CA00B82595 /* MovielixTests.swift */; };
 		2196201628F6A8CA00B82595 /* MovielixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196201528F6A8CA00B82595 /* MovielixUITests.swift */; };
 		2196201828F6A8CA00B82595 /* MovielixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196201728F6A8CA00B82595 /* MovielixUITestsLaunchTests.swift */; };
+		2196202628F6A8F400B82595 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196202528F6A8F300B82595 /* CustomTabBar.swift */; };
+		2196202928F6AF0E00B82595 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196202828F6AF0E00B82595 /* MoviesViewModel.swift */; };
+		2196202C28F6AF6900B82595 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196202B28F6AF6900B82595 /* Movie.swift */; };
+		2196202E28F6AF9C00B82595 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196202D28F6AF9C00B82595 /* ApiKey.swift */; };
+		2196203428F6B92600B82595 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2196203028F6B92600B82595 /* Poppins-Black.ttf */; };
+		2196203528F6B92600B82595 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2196203128F6B92600B82595 /* Poppins-Regular.ttf */; };
+		2196203628F6B92600B82595 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2196203228F6B92600B82595 /* Poppins-Medium.ttf */; };
+		2196203728F6B92600B82595 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2196203328F6B92600B82595 /* Poppins-ExtraBold.ttf */; };
+		2196203F28F6BE1700B82595 /* MoviesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196203E28F6BE1700B82595 /* MoviesCollectionView.swift */; };
+		2196204128F6D21400B82595 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204028F6D21400B82595 /* MovieDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		21961FF728F6A8C900B82595 /* Movielix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movielix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21961FFA28F6A8C900B82595 /* MovielixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovielixApp.swift; sourceTree = "<group>"; };
-		21961FFC28F6A8C900B82595 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		21961FFC28F6A8C900B82595 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		21961FFE28F6A8CA00B82595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2196200128F6A8CA00B82595 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2196200728F6A8CA00B82595 /* MovielixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovielixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,17 @@
 		2196201128F6A8CA00B82595 /* MovielixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovielixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2196201528F6A8CA00B82595 /* MovielixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovielixUITests.swift; sourceTree = "<group>"; };
 		2196201728F6A8CA00B82595 /* MovielixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovielixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2196202528F6A8F300B82595 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		2196202828F6AF0E00B82595 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		2196202B28F6AF6900B82595 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2196202D28F6AF9C00B82595 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		2196203028F6B92600B82595 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		2196203128F6B92600B82595 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		2196203228F6B92600B82595 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		2196203328F6B92600B82595 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2196203828F6B93400B82595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2196203E28F6BE1700B82595 /* MoviesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionView.swift; sourceTree = "<group>"; };
+		2196204028F6D21400B82595 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +115,16 @@
 		21961FF928F6A8C900B82595 /* Movielix */ = {
 			isa = PBXGroup;
 			children = (
+				2196203828F6B93400B82595 /* Info.plist */,
+				2196202F28F6B90B00B82595 /* fonts */,
+				2196202A28F6AF4F00B82595 /* Model */,
+				2196202728F6AEF400B82595 /* ViewModel */,
+				2196202428F6A8DE00B82595 /* View */,
 				21961FFA28F6A8C900B82595 /* MovielixApp.swift */,
-				21961FFC28F6A8C900B82595 /* ContentView.swift */,
+				21961FFC28F6A8C900B82595 /* MoviesView.swift */,
 				21961FFE28F6A8CA00B82595 /* Assets.xcassets */,
 				2196200028F6A8CA00B82595 /* Preview Content */,
+				2196202D28F6AF9C00B82595 /* ApiKey.swift */,
 			);
 			path = Movielix;
 			sourceTree = "<group>";
@@ -125,6 +152,44 @@
 				2196201728F6A8CA00B82595 /* MovielixUITestsLaunchTests.swift */,
 			);
 			path = MovielixUITests;
+			sourceTree = "<group>";
+		};
+		2196202428F6A8DE00B82595 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2196203E28F6BE1700B82595 /* MoviesCollectionView.swift */,
+				2196202528F6A8F300B82595 /* CustomTabBar.swift */,
+				2196204028F6D21400B82595 /* MovieDetail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2196202728F6AEF400B82595 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2196202828F6AF0E00B82595 /* MoviesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2196202A28F6AF4F00B82595 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2196202B28F6AF6900B82595 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2196202F28F6B90B00B82595 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2196203028F6B92600B82595 /* Poppins-Black.ttf */,
+				2196203328F6B92600B82595 /* Poppins-ExtraBold.ttf */,
+				2196203228F6B92600B82595 /* Poppins-Medium.ttf */,
+				2196203128F6B92600B82595 /* Poppins-Regular.ttf */,
+			);
+			name = fonts;
+			path = "fontsü";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +296,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2196203428F6B92600B82595 /* Poppins-Black.ttf in Resources */,
 				2196200228F6A8CA00B82595 /* Preview Assets.xcassets in Resources */,
 				21961FFF28F6A8CA00B82595 /* Assets.xcassets in Resources */,
+				2196203528F6B92600B82595 /* Poppins-Regular.ttf in Resources */,
+				2196203728F6B92600B82595 /* Poppins-ExtraBold.ttf in Resources */,
+				2196203628F6B92600B82595 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21961FFD28F6A8C900B82595 /* ContentView.swift in Sources */,
+				2196203F28F6BE1700B82595 /* MoviesCollectionView.swift in Sources */,
+				21961FFD28F6A8C900B82595 /* MoviesView.swift in Sources */,
+				2196202628F6A8F400B82595 /* CustomTabBar.swift in Sources */,
 				21961FFB28F6A8C900B82595 /* MovielixApp.swift in Sources */,
+				2196202928F6AF0E00B82595 /* MoviesViewModel.swift in Sources */,
+				2196202E28F6AF9C00B82595 /* ApiKey.swift in Sources */,
+				2196202C28F6AF6900B82595 /* Movie.swift in Sources */,
+				2196204128F6D21400B82595 /* MovieDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +494,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Movielix/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Movielix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +523,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Movielix/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Movielix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
