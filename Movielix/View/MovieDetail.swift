@@ -61,7 +61,6 @@ struct MovieDetail: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .fill(.white)
-                    .frame(width: .infinity, height: .infinity)
                     .padding(.top, -400)
 
                 ScrollView {
