@@ -24,6 +24,9 @@
 		2196203728F6B92600B82595 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2196203328F6B92600B82595 /* Poppins-ExtraBold.ttf */; };
 		2196203F28F6BE1700B82595 /* MoviesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196203E28F6BE1700B82595 /* MoviesCollectionView.swift */; };
 		2196204128F6D21400B82595 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204028F6D21400B82595 /* MovieDetail.swift */; };
+		2196204328F7E42F00B82595 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204228F7E42F00B82595 /* SearchView.swift */; };
+		2196204528F7EBC700B82595 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204428F7EBC700B82595 /* SearchViewModel.swift */; };
+		2196204728F7EC2500B82595 /* SearchedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204628F7EC2500B82595 /* SearchedMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		2196203828F6B93400B82595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2196203E28F6BE1700B82595 /* MoviesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionView.swift; sourceTree = "<group>"; };
 		2196204028F6D21400B82595 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		2196204228F7E42F00B82595 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2196204428F7EBC700B82595 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2196204628F7EC2500B82595 /* SearchedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +127,6 @@
 				2196202728F6AEF400B82595 /* ViewModel */,
 				2196202428F6A8DE00B82595 /* View */,
 				21961FFA28F6A8C900B82595 /* MovielixApp.swift */,
-				21961FFC28F6A8C900B82595 /* MoviesView.swift */,
 				21961FFE28F6A8CA00B82595 /* Assets.xcassets */,
 				2196200028F6A8CA00B82595 /* Preview Content */,
 				2196202D28F6AF9C00B82595 /* ApiKey.swift */,
@@ -160,6 +165,8 @@
 				2196203E28F6BE1700B82595 /* MoviesCollectionView.swift */,
 				2196202528F6A8F300B82595 /* CustomTabBar.swift */,
 				2196204028F6D21400B82595 /* MovieDetail.swift */,
+				21961FFC28F6A8C900B82595 /* MoviesView.swift */,
+				2196204228F7E42F00B82595 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2196202828F6AF0E00B82595 /* MoviesViewModel.swift */,
+				2196204428F7EBC700B82595 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				2196202B28F6AF6900B82595 /* Movie.swift */,
+				2196204628F7EC2500B82595 /* SearchedMovie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,10 +336,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2196203F28F6BE1700B82595 /* MoviesCollectionView.swift in Sources */,
+				2196204328F7E42F00B82595 /* SearchView.swift in Sources */,
+				2196204728F7EC2500B82595 /* SearchedMovie.swift in Sources */,
 				21961FFD28F6A8C900B82595 /* MoviesView.swift in Sources */,
 				2196202628F6A8F400B82595 /* CustomTabBar.swift in Sources */,
 				21961FFB28F6A8C900B82595 /* MovielixApp.swift in Sources */,
 				2196202928F6AF0E00B82595 /* MoviesViewModel.swift in Sources */,
+				2196204528F7EBC700B82595 /* SearchViewModel.swift in Sources */,
 				2196202E28F6AF9C00B82595 /* ApiKey.swift in Sources */,
 				2196202C28F6AF6900B82595 /* Movie.swift in Sources */,
 				2196204128F6D21400B82595 /* MovieDetail.swift in Sources */,

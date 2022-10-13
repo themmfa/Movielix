@@ -10,6 +10,7 @@ import SwiftUI
 struct Movies: View {
     @State private var selectedTab: Tab = .film
     @StateObject var movieViewModel = MoviesViewModel()
+    @StateObject var searchViewModel = SearchViewModel()
 
     init() {
         UITabBar.appearance().isHidden = true
@@ -24,7 +25,23 @@ struct Movies: View {
                             MoviesView(movieViewModel: movieViewModel)
                         }
                         if selectedTab.rawValue == "magnifyingglass" {
-                            SearchView()
+                            SearchView(searchViewModel: searchViewModel)
+                                .onChange(of: searchViewModel.query) { newItem in
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                        searchViewModel.searchedMovies.removeAll()
+                                        Task {
+                                            if newItem == searchViewModel.query {
+                                                if searchViewModel.query != "" {
+                                                    await searchViewModel.getSearchedMovies()
+                                                }
+                                                else {
+                                                    searchViewModel.searchedMovies.removeAll()
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            Spacer()
                         }
                     }
                 }
@@ -94,14 +111,6 @@ struct PopularMovies: View {
 
     var body: some View {
         MoviesCollectionView(movieViewModel: movieViewModel, title: "POPULAR", movieList: popularMovies)
-    }
-}
-
-struct SearchView: View {
-    var body: some View {
-        VStack {
-            Text("Search View")
-        }
     }
 }
 

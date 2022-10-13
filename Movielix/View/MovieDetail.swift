@@ -7,38 +7,14 @@
 
 import SwiftUI
 
-var dummy = Movie(adult: false, genre_ids: [
-    14,
-    35,
-    10751
-], id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554)
+var dummy = Movie(adult: false, id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554)
 
 let dummy_suggestions = [
-    Movie(adult: false, genre_ids: [
-        14,
-        35,
-        10751
-    ], id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
-    Movie(adult: false, genre_ids: [
-        14,
-        35,
-        10751
-    ], id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
-    Movie(adult: false, genre_ids: [
-        14,
-        35,
-        10751
-    ], id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
-    Movie(adult: false, genre_ids: [
-        14,
-        35,
-        10751
-    ], id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
-    Movie(adult: false, genre_ids: [
-        14,
-        35,
-        10751
-    ], id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554)
+    Movie(adult: false, id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
+    Movie(adult: false, id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
+    Movie(adult: false, id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
+    Movie(adult: false, id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554),
+    Movie(adult: false, id: 642885, original_language: "en", original_title: "Hocus Pocus 2", overview: "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.", popularity: 6354.721, poster_path: "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg", release_date: "2022-09-27", title: "Hocus Pocus 2", video: false, vote_average: 7.8, vote_count: 554)
 ]
 
 struct MovieDetail: View {
@@ -90,7 +66,7 @@ private struct SimilarMoviesView: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(movieViewModel.similar, id: \.self) { movie in
-                        NavigationLink(destination:MovieDetail(movieViewModel: movieViewModel, movie: movie)){
+                        NavigationLink(destination: MovieDetail(movieViewModel: movieViewModel, movie: movie)) {
                             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.poster_path)")) { image in
                                 image
                                     .resizable()

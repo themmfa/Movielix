@@ -13,9 +13,8 @@ struct NowPlaying: Decodable {
 
 // MARK: - Welcome
 
-struct Movie: Decodable, Hashable {
+struct Movie: Decodable, Hashable, Identifiable {
     let adult: Bool
-    let genre_ids: [Int]
     let id: Int
     let original_language, original_title, overview: String
     let popularity: Double
