@@ -25,7 +25,7 @@ struct Movies: View {
                             MoviesView(movieViewModel: movieViewModel)
                         }
                         if selectedTab.rawValue == "magnifyingglass" {
-                            SearchView(searchViewModel: searchViewModel)
+                            SearchView(searchViewModel: searchViewModel, movieViewModel: movieViewModel)
                                 .onChange(of: searchViewModel.query) { newItem in
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                                         searchViewModel.searchedMovies.removeAll()
