@@ -30,7 +30,7 @@ class SearchViewModel: ObservableObject {
     }
 
     private func getMovieFromId(url: URL) async -> Movie? {
-        let urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url,cachePolicy: .returnCacheDataElseLoad)
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
@@ -48,7 +48,7 @@ class SearchViewModel: ObservableObject {
     }
 
     private func getSearchedMovieIds(url: URL) async -> [SearchedMovies] {
-        let urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url,cachePolicy: .returnCacheDataElseLoad)
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)

@@ -73,9 +73,7 @@ private struct SimilarMoviesView: View {
                                     .scaledToFill()
                                     .frame(width: 100, height: 100)
                             } placeholder: {
-                                Image(systemName: "photo.artframe")
-                                    .resizable()
-                                    .scaledToFill()
+                                ProgressView()
                             }
                         }
                     }

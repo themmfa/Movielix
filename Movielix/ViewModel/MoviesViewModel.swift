@@ -35,7 +35,7 @@ class MoviesViewModel: ObservableObject {
     }
 
     private func getMovies(url: URL) async -> [Movie] {
-        let urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
