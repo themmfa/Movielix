@@ -19,7 +19,6 @@ struct SearchView: View {
                 }
                 .searchable(text: $searchViewModel.query)
             }
-            .padding()
         }
     }
 }
@@ -29,17 +28,15 @@ struct SearchedMoviesListView: View {
     @ObservedObject var movieViewModel: MoviesViewModel
     var body: some View {
         NavigationLink(destination: MovieDetail(movieViewModel: movieViewModel, movie: movie)) {
-            HStack {
-                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.poster_path)")) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 50, height: 75)
+            HStack(spacing: 4) {
+                AsyncImageLoader(movie: movie, height: 75, width: 50)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(movie.title)
+                        .font(.title2)
 
-                } placeholder: {
-                    ProgressView()
+                    Text(String(format: "%.1f", movie.vote_average))
+                        .font(.subheadline)
                 }
-                Text(movie.title)
             }
         }
     }

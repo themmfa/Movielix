@@ -23,21 +23,12 @@ struct MovieDetail: View {
 
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.poster_path)")) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-
-            } placeholder: {
-                Image(systemName: "photo.artframe")
-                    .resizable()
-                    .scaledToFill()
-            }
+            AsyncImageLoader(movie: movie)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .fill(.white)
-                    .padding(.top, -400)
+                    .padding(.top, -300)
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 10) {
@@ -49,7 +40,7 @@ struct MovieDetail: View {
                     }
                     .padding(.horizontal, 20)
                 }
-                .padding(.top, -350)
+                .padding(.top, -250)
             }
         }
     }
@@ -67,14 +58,7 @@ private struct SimilarMoviesView: View {
                 HStack {
                     ForEach(movieViewModel.similar, id: \.self) { movie in
                         NavigationLink(destination: MovieDetail(movieViewModel: movieViewModel, movie: movie)) {
-                            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.poster_path)")) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 100, height: 100)
-                            } placeholder: {
-                                ProgressView()
-                            }
+                            AsyncImageLoader(movie: movie, height: 100, width: 100)
                         }
                     }
                 }
