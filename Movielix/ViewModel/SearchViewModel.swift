@@ -14,6 +14,22 @@ class SearchViewModel: ObservableObject {
     @Published var searchedMovies: [Movie] = []
     @Published var query = ""
 
+    func queryMovies(searchViewModel: SearchViewModel, queryText: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            searchViewModel.searchedMovies.removeAll()
+            Task {
+                if queryText == searchViewModel.query {
+                    if searchViewModel.query != "" {
+                        await searchViewModel.getSearchedMovies()
+                    }
+                    else {
+                        searchViewModel.searchedMovies.removeAll()
+                    }
+                }
+            }
+        }
+    }
+
     func getSearchedMovies() async {
         var movies: [Movie] = []
         guard let url = URL(string: "\(baseUrl)/search/movie?api_key=\(apiKey)&query=\(query)&page=1") else { return }

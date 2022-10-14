@@ -27,19 +27,7 @@ struct Movies: View {
                         if selectedTab.rawValue == "magnifyingglass" {
                             SearchView(searchViewModel: searchViewModel, movieViewModel: movieViewModel)
                                 .onChange(of: searchViewModel.query) { newItem in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                                        searchViewModel.searchedMovies.removeAll()
-                                        Task {
-                                            if newItem == searchViewModel.query {
-                                                if searchViewModel.query != "" {
-                                                    await searchViewModel.getSearchedMovies()
-                                                }
-                                                else {
-                                                    searchViewModel.searchedMovies.removeAll()
-                                                }
-                                            }
-                                        }
-                                    }
+                                    searchViewModel.queryMovies(searchViewModel: searchViewModel, queryText: newItem)
                                 }
                             Spacer()
                         }
