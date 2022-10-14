@@ -14,13 +14,10 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                SearchBar(searchViewModel: searchViewModel)
-                Spacer()
-                if !searchViewModel.searchedMovies.isEmpty {
-                    List(searchViewModel.searchedMovies, id: \.id) { movie in
-                        SearchedMoviesListView(movie: movie, movieViewModel: movieViewModel)
-                    }
+                List(searchViewModel.searchedMovies, id: \.id) { movie in
+                    SearchedMoviesListView(movie: movie, movieViewModel: movieViewModel)
                 }
+                .searchable(text: $searchViewModel.query)
             }
             .padding()
         }
@@ -45,24 +42,5 @@ struct SearchedMoviesListView: View {
                 Text(movie.title)
             }
         }
-    }
-}
-
-struct SearchBar: View {
-    @ObservedObject var searchViewModel: SearchViewModel
-
-    var body: some View {
-        HStack {
-            Image(systemName: "magnifyingglass")
-                .font(.title)
-                .foregroundColor(.black)
-            TextField("Search..", text: $searchViewModel.query)
-                .font(.headline)
-                .textInputAutocapitalization(.none)
-                .autocorrectionDisabled()
-        }
-        .padding(10)
-        .background(.gray)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

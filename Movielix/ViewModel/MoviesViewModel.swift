@@ -9,28 +9,29 @@ import Foundation
 
 @MainActor
 class MoviesViewModel: ObservableObject {
+    let baseUrl = "https://api.themoviedb.org/3/movie"
     @Published var topRated: [Movie] = []
     @Published var popular: [Movie] = []
     @Published var upcoming: [Movie] = []
     @Published var similar: [Movie] = []
 
     func getSimilarMovies(id: Int) async {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)/similar?api_key=\(apiKey)&language=en-US&page=1") else { return }
+        guard let url = URL(string: "\(baseUrl)/\(id)/similar?api_key=\(apiKey)&language=en-US&page=1") else { return }
         similar = await getMovies(url: url)
     }
 
     func getUpcomingMovies() async {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/upcoming?api_key=\(apiKey)&language=en-US&page=1") else { return }
+        guard let url = URL(string: "\(baseUrl)/upcoming?api_key=\(apiKey)&language=en-US&page=1") else { return }
         upcoming = await getMovies(url: url)
     }
 
     func getPopularMovies() async {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)&language=en-US&page=1") else { return }
+        guard let url = URL(string: "\(baseUrl)/popular?api_key=\(apiKey)&language=en-US&page=1") else { return }
         popular = await getMovies(url: url)
     }
 
     func getTopRatedMovies() async {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=\(apiKey)&language=en-US&page=1") else { return }
+        guard let url = URL(string: "\(baseUrl)/top_rated?api_key=\(apiKey)&language=en-US&page=1") else { return }
         topRated = await getMovies(url: url)
     }
 

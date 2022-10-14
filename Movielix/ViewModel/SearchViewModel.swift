@@ -9,18 +9,19 @@ import Foundation
 
 @MainActor
 class SearchViewModel: ObservableObject {
+    let baseUrl = "https://api.themoviedb.org/3"
     @Published var searched: [SearchedMovies] = []
     @Published var searchedMovies: [Movie] = []
     @Published var query = ""
 
     func getSearchedMovies() async {
         var movies: [Movie] = []
-        guard let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(query)&page=1") else { return }
+        guard let url = URL(string: "\(baseUrl)/search/movie?api_key=\(apiKey)&query=\(query)&page=1") else { return }
         searched = await getSearchedMovieIds(url: url)
 
         if !searched.isEmpty {
             for movieId in searched {
-                guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieId.id)?api_key=\(apiKey)&language=en-US") else { return }
+                guard let url = URL(string: "\(baseUrl)/movie/\(movieId.id)?api_key=\(apiKey)&language=en-US") else { return }
                 if let movie = await getMovieFromId(url: url) {
                     movies.append(movie)
                 }
@@ -30,7 +31,7 @@ class SearchViewModel: ObservableObject {
     }
 
     private func getMovieFromId(url: URL) async -> Movie? {
-        let urlRequest = URLRequest(url: url,cachePolicy: .returnCacheDataElseLoad)
+        let urlRequest = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
@@ -48,7 +49,7 @@ class SearchViewModel: ObservableObject {
     }
 
     private func getSearchedMovieIds(url: URL) async -> [SearchedMovies] {
-        let urlRequest = URLRequest(url: url,cachePolicy: .returnCacheDataElseLoad)
+        let urlRequest = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
