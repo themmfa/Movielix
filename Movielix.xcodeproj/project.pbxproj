@@ -28,6 +28,7 @@
 		2196204528F7EBC700B82595 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204428F7EBC700B82595 /* SearchViewModel.swift */; };
 		2196204728F7EC2500B82595 /* SearchedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204628F7EC2500B82595 /* SearchedMovie.swift */; };
 		2196204928F94C6400B82595 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204828F94C6400B82595 /* AsyncImageLoader.swift */; };
+		2196204B28FAF75F00B82595 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204A28FAF75F00B82595 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		2196204428F7EBC700B82595 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2196204628F7EC2500B82595 /* SearchedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedMovie.swift; sourceTree = "<group>"; };
 		2196204828F94C6400B82595 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
+		2196204A28FAF75F00B82595 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				21961FFC28F6A8C900B82595 /* MoviesView.swift */,
 				2196204228F7E42F00B82595 /* SearchView.swift */,
 				2196204828F94C6400B82595 /* AsyncImageLoader.swift */,
+				2196204A28FAF75F00B82595 /* SplashScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2196203F28F6BE1700B82595 /* MoviesCollectionView.swift in Sources */,
+				2196204B28FAF75F00B82595 /* SplashScreenView.swift in Sources */,
 				2196204328F7E42F00B82595 /* SearchView.swift in Sources */,
 				2196204728F7EC2500B82595 /* SearchedMovie.swift in Sources */,
 				21961FFD28F6A8C900B82595 /* MoviesView.swift in Sources */,

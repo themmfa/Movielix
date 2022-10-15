@@ -11,7 +11,7 @@ import SwiftUI
 struct MovielixApp: App {
     var body: some Scene {
         WindowGroup {
-            Movies()
+            SplashScreenView()
         }
     }
 }
