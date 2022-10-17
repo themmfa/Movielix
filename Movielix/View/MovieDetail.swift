@@ -37,10 +37,44 @@ struct MovieDetail: View {
                         RatingView(movieRating: movie.vote_average)
                         DescriptionView(movieDesc: movie.overview)
                         SimilarMoviesView(movieViewModel: movieViewModel, movie: movie)
+                        CastView(movieViewModel: movieViewModel, movie: movie)
                     }
                     .padding(.horizontal, 20)
                 }
                 .padding(.top, -250)
+            }
+        }
+    }
+}
+
+private struct CastView: View {
+    @ObservedObject var movieViewModel: MoviesViewModel
+    var movie: Movie
+    var baseUrl = "https://image.tmdb.org/t/p/w500"
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Casts")
+                .modifier(CustomTextModifier(font: Font.custom("Poppins-Bold", size: 24)))
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(movieViewModel.casts, id: \.self) { cast in
+                        AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(cast.profile_path ?? "")")) { image in
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 150, height: 150)
+
+                        } placeholder: {
+                            ProgressView()
+                        }
+                    }
+                }
+            }
+            .onAppear {
+                Task {
+                    await movieViewModel.getCasts(id: movie.id)
+                }
             }
         }
     }

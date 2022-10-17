@@ -29,6 +29,7 @@
 		2196204728F7EC2500B82595 /* SearchedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204628F7EC2500B82595 /* SearchedMovie.swift */; };
 		2196204928F94C6400B82595 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204828F94C6400B82595 /* AsyncImageLoader.swift */; };
 		2196204B28FAF75F00B82595 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204A28FAF75F00B82595 /* SplashScreenView.swift */; };
+		2196204D28FD383A00B82595 /* Casts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196204C28FD383A00B82595 /* Casts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2196204628F7EC2500B82595 /* SearchedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedMovie.swift; sourceTree = "<group>"; };
 		2196204828F94C6400B82595 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
 		2196204A28FAF75F00B82595 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		2196204C28FD383A00B82595 /* Casts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			children = (
 				2196202B28F6AF6900B82595 /* Movie.swift */,
 				2196204628F7EC2500B82595 /* SearchedMovie.swift */,
+				2196204C28FD383A00B82595 /* Casts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				2196202928F6AF0E00B82595 /* MoviesViewModel.swift in Sources */,
 				2196204528F7EBC700B82595 /* SearchViewModel.swift in Sources */,
 				2196202E28F6AF9C00B82595 /* ApiKey.swift in Sources */,
+				2196204D28FD383A00B82595 /* Casts.swift in Sources */,
 				2196204928F94C6400B82595 /* AsyncImageLoader.swift in Sources */,
 				2196202C28F6AF6900B82595 /* Movie.swift in Sources */,
 				2196204128F6D21400B82595 /* MovieDetail.swift in Sources */,
